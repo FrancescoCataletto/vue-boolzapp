@@ -3,3 +3,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    overflow: hidden;
+}
+
+/* HEADER */
+header{
+    background-color: rgb(36, 150, 136);
+    height: 15vh;
+    min-height: 70px;
+}
+
+/* MAIN */
+main{
+    background-color: rgb(216, 220, 214);
+    height: 85vh;
+    max-height: calc(100vh - 70px);
+    position: relative;
+}
+
+#app{
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -58%);
+    width: 80vw;
+    height: 95vh;
+    background-color: red;
+}
