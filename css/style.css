@@ -11,38 +11,32 @@ body{
 /* HEADER */
 header{
     background-color: rgb(36, 150, 136);
-    height: 15vh;
-    min-height: 70px;
 }
 
 /* MAIN */
 main{
-    background-color: rgb(216, 220, 214);
-    height: 85vh;
-    max-height: calc(100vh - 70px);
-    position: relative;
+    background: linear-gradient(to bottom,
+    rgb(36, 150, 136) 0vh,
+    rgb(36, 150, 136) 15vh,
+    rgb(216, 220, 214) 15vh,
+    rgb(216, 220, 214) 85vh);
+    height: 100vh;
 }
 
 #app{
-    z-index: 999;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -58%);
-    width: 80vw;
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 80%;
+    min-width: 750px;
+    max-width: 1800px;
     height: 95vh;
     display: flex;
 }
 
+/* LEFT COLUMN OF WHATSAPP CONTAINER */
 #left-column{
     height: 100%;
     width: 35%;
-}
-
-#right-column{
-    background-color: aquamarine;
-    height: 100%;
-    width: 65%;
 }
 
 #user-name{
@@ -61,4 +55,11 @@ main{
     width: 100%;
     height: calc(100% - 160px);
     background-color: white;
+}
+
+/* RIGHT COLUMN OF WHATSAPP CONTAINER */
+#right-column{
+    background-color: aquamarine;
+    height: 100%;
+    width: 65%;
 }
