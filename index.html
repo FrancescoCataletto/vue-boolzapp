@@ -56,14 +56,14 @@
                 </div>
 
                 <!-- MESSAGES SENT LIST -->
-                <div id="msg-list">
-                    <div id="single-chat">
+                <div id="msg-list" >
+                    <div id="single-chat" v-for="(user, index) in contacs">
                         <div>
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
                         </div>
                         <div>
                           <div class="spaceAndAlign">
-                              <h3>Michele</h3>
+                              <h3>{{user.name}}</h3>
                               <p><span>10/01/2020</span> <span>16:15:22</span></p>
                           </div>
                           <p>Tutto fatto!</p>
@@ -96,11 +96,11 @@
                     <div id="conversation-container">
                         <div class="sent-message">
                             <p>Lo sai che ha aperto una nuova pizzeria?</p>
-                            <p class="time-and-date"><span>10/01/2020</span><span>15:30:55</span></p> 
+                            <p class="time-and-date"><span>10/01/2020</span> <span>15:30:55</span></p> 
                         </div>
                         <div class="received-message">
                             <p>Si, ma preferirei andare al cinema perché al ristorante ci siamo andati ieri e non ne ho voglia!</p>
-                            <p class="time-and-date"><span>10/01/2020</span><span>15:30:55</span></p>
+                            <p class="time-and-date"><span>10/01/2020</span> <span>15:30:55</span></p>
                         </div>
                     </div>
                 </div>
