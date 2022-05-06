@@ -15,6 +15,9 @@ header{
 
 /* MAIN */
 main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(to bottom,
     rgb(36, 150, 136) 0vh,
     rgb(36, 150, 136) 15vh,
@@ -24,8 +27,6 @@ main{
 }
 
 #app{
-    margin: 0 auto;
-    padding-top: 15px;
     width: 80%;
     min-width: 750px;
     max-width: 1800px;
