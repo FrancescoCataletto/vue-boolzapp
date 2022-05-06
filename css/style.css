@@ -28,7 +28,7 @@ main{
 
 #app{
     width: 80%;
-    min-width: 750px;
+    min-width: 850px;
     max-width: 1800px;
     height: 95vh;
     display: flex;
@@ -60,7 +60,24 @@ main{
 
 /* RIGHT COLUMN OF WHATSAPP CONTAINER */
 #right-column{
-    background-color: aquamarine;
     height: 100%;
     width: 65%;
+}
+
+#current-msg{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(234, 233, 234);
+}
+
+#conversation{
+    width: 100%;
+    background-color: rgb(142, 218, 252);
+    height: calc(100% - 120px);
+}
+
+#type-msg{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(243, 238, 234);
 }
