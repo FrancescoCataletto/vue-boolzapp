@@ -189,6 +189,8 @@ main{
     padding: 10px;
     align-self: flex-end;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .received-message{
@@ -197,6 +199,16 @@ main{
     padding: 10px;
     width: 50%;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.time-and-date{
+    align-self: flex-end;
+}
+
+#conversation span{
+    font-size: 10px;
 }
 /* text input section with emoji and mic */
 #type-msg{
