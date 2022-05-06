@@ -74,6 +74,7 @@ main{
 #msg-list{
     width: 100%;
     height: calc(100% - 200px);
+    min-height: 420px;
     background-color: white;
 }
 
@@ -92,6 +93,7 @@ main{
 #conversation{
     width: 100%;
     background-color: rgb(142, 218, 252);
+    min-height: 500px;
     height: calc(100% - 120px);
 }
 
