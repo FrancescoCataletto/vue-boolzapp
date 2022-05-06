@@ -87,10 +87,34 @@ main{
     text-decoration: underline;
     cursor: pointer;
 }
-
+/* search-bar-section */
 #search-chat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 40px;
     width: 100%;
+    background-color: white;
+}
+
+#search-chat i{
+    background-color: white;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: grey;
+    border: 1px solid rgb(245, 246, 245);
+    border-right: none;
+    cursor: pointer;
+}
+
+#search-bar{
+    width: calc(90% - 60px);
+    height: 30px;
+    border: 1px solid rgb(245, 246, 245);
+    border-left: none;
 }
 
 #msg-list{
