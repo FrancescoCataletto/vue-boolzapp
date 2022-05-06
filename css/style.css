@@ -5,10 +5,6 @@
     font-family: 'Lato', sans-serif;
 }
 
-body{
-    overflow: hidden;
-}
-
 /* HEADER */
 header{
     background-color: rgb(36, 150, 136);
@@ -116,12 +112,30 @@ main{
     border: 1px solid rgb(245, 246, 245);
     border-left: none;
 }
-
+/* sent messages list */
 #msg-list{
     width: 100%;
     height: calc(100% - 200px);
     min-height: 420px;
     background-color: white;
+    overflow: auto;
+}
+
+#single-chat{
+    padding: 10px 20px 30px 20px;
+    cursor: pointer;
+}
+
+#single-chat:hover{
+    background-color: lightgrey;
+}
+
+#msg-list img{
+    float: left;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 5px;
 }
 
 /* RIGHT COLUMN OF WHATSAPP CONTAINER */
