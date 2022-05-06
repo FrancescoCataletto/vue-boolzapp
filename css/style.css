@@ -13,7 +13,7 @@ header{
     background-color: rgb(36, 150, 136);
 }
 
-/* MAIN */
+/*--------------- MAIN -------------------*/
 main{
     display: flex;
     align-items: center;
@@ -52,9 +52,14 @@ main{
     background-color: rgb(142, 218, 252);
 }
 
+#search-chat{
+    height: 40px;
+    width: 100%;
+}
+
 #msg-list{
     width: 100%;
-    height: calc(100% - 160px);
+    height: calc(100% - 200px);
     background-color: white;
 }
 
