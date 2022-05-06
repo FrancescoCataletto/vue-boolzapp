@@ -144,12 +144,12 @@ main{
     height: 100%;
     width: 65%;
 }
-
+/* current person having a conversation with section */
 #current-msg{
     width: 100%;
     height: 70px;
     background-color: rgb(234, 233, 234);
-    border-left: 1px solid grey;
+    border-left: 1px solid rgb(176, 176, 177);
 }
 
 #current-msg img{
@@ -168,13 +168,35 @@ main{
 
 #conversation{
     width: 100%;
-    background-color: rgb(142, 218, 252);
+    background-image: url("/img/mine.jpg");
     min-height: 500px;
     height: calc(100% - 120px);
+    overflow-y: scroll;
 }
-
+/* text input section with emoji and mic */
 #type-msg{
     width: 100%;
     height: 50px;
     background-color: rgb(243, 238, 234);
+}
+
+#msg-input{
+    width: 70%;
+    height: 40px;
+}
+
+#msg-input input{
+    width: 100%;
+    height: 100%;
+}
+
+#msg-input input::placeholder{
+    padding-left: 20px;
+}
+
+#type-msg i{
+    font-size: 25px;
+    padding: 20px;
+    color: rgb(108, 115, 117);
+    cursor: pointer;
 }
