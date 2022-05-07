@@ -166,12 +166,26 @@ const app = new Vue({
             }
         ],
 
-        activeUser: 0
+        activeUser: 0,
+
+        newSentMessage: "", 
     },
 
     methods: {
+        // FUNZIONE CHE CAMBIA IL NUMERO DELL'ACTIVE USER: IN BASE AL NUMERO VIENE RICHIAMATO UN INDICE DIVERSO DELL'ARRAY DI OGGETTI "CONTACS" E VENGONO MOSTRATI I MESSAGGI RELATIVI A QUELLA CHAT CON UN CICLO V-FOR
         changeConvo(index){
             this.activeUser = index;
-            }
+            },
+        // FUNZIONE PER MANDARE UN NUOVO MESSAGGIO IN BASE AL CONTATTO SELEZIONATO
+        sendMessage(){
+            this.contacs[this.activeUser].messages.push(
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: this.newSentMessage,
+                    status: 'sent'
+                }
+            )
+            this.newSentMessage = ""
         }
+    }
 })
