@@ -170,7 +170,9 @@ const app = new Vue({
 
         newSentMessage: "", 
 
-        searchUser: ""
+        searchUser: "",
+
+        currentDate: ""
     },
 
     methods: {
@@ -182,7 +184,7 @@ const app = new Vue({
         sendMessage(){
             this.contacs[this.activeUser].messages.push(
                 {
-                    date: '10/01/2020 15:30:55',
+                    date: this.currentDate,
                     message: this.newSentMessage,
                     status: 'sent'
                 }
@@ -192,12 +194,18 @@ const app = new Vue({
             setTimeout(() => {
                 this.contacs[this.activeUser].messages.push(
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: this.currentDate,
                         message: 'Ok!',
                         status: 'received'
                     }
                 )
             }, 1000)
+        },
+
+        timeAndDate(){
+            let  moment = new Date()
+            this.currentDate = moment.toLocaleString()
+            console.log(this.currentDate)
         }
     }
 })

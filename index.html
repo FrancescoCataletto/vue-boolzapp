@@ -58,7 +58,7 @@
                 <!-- MESSAGES SENT LIST -->
                 <div id="msg-list" >
                     <div id="single-chat" 
-                         v-for="(user, index) in contacs"
+                         v-for="(user, index) in contacs"   
                          v-show="user.name.toLowerCase().includes(searchUser)" 
                          @click="changeConvo(index)">
                         <div>
@@ -67,7 +67,7 @@
                         <div>
                           <div class="spaceAndAlign">
                               <h3>{{user.name}}</h3>
-                              <p><span>10/01/2020</span> <span>16:15:22</span></p>
+                              <p>{{user.messages[user.messages.length - 1].date}}</p>
                           </div>
                           <p>{{user.messages[user.messages.length - 1].message}}</p>
                         </div>
@@ -85,7 +85,7 @@
                         </div>
                         <div>
                             <h3>{{contacs[activeUser].name}}</h3>
-                            <p>Ultimo accesso oggi alle</p>
+                            <p>Ultimo accesso oggi alle {{contacs[activeUser].messages[contacs[activeUser].messages.length - 1].date}}</p>
                         </div>
                     </div>
                     <div class="fRight h100 justAndAlign">
@@ -96,7 +96,7 @@
                 </div>
                 <!-- whole current conversation -->
                 <div id="conversation">
-                    <div id="conversation-container">
+                    <div id="conversation-container">   
                         <div v-for="el in contacs[activeUser].messages"
                              :class="el.status">
                             <p>{{el.message}}</p>
@@ -110,7 +110,7 @@
                         <i class="fa-solid fa-face-smile"></i>
                     </div>
                     <div id="msg-input">
-                        <input type="text" name="" id="" placeholder="Scrivi un messaggio" v-model.trim="newSentMessage" @keyup.enter="sendMessage()">
+                        <input type="text" name="" id="" placeholder="Scrivi un messaggio" v-model.trim="newSentMessage" @keyup.enter="timeAndDate(), sendMessage()">
                     </div>
                     <div>
                         <i class="fa-solid fa-microphone"></i>
