@@ -52,13 +52,14 @@
                 <!-- SEARCH-MSG-BAR -->
                 <div id="search-chat">
                     <label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
-                    <input type="search" name="" id="search-bar" placeholder="Cerca o inizia una nuova chat">
+                    <input type="search" name="" id="search-bar" placeholder="Cerca o inizia una nuova chat" v-model.trim="searchUser">
                 </div>
 
                 <!-- MESSAGES SENT LIST -->
                 <div id="msg-list" >
                     <div id="single-chat" 
                          v-for="(user, index) in contacs"
+                         v-show="user.name.toLowerCase().includes(searchUser)" 
                          @click="changeConvo(index)">
                         <div>
                             <img :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">

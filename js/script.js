@@ -169,6 +169,8 @@ const app = new Vue({
         activeUser: 0,
 
         newSentMessage: "", 
+
+        searchUser: ""
     },
 
     methods: {
