@@ -183,7 +183,7 @@ main{
     flex-direction: column;
 }
 
-.sent-message{
+.sent{
     background-color: rgb(213, 249, 186);
     border-radius: 10px;
     padding: 10px;
@@ -193,7 +193,7 @@ main{
     flex-direction: column;
 }
 
-.received-message{
+.received{
     background-color: white;
     border-radius: 10px;
     padding: 10px;

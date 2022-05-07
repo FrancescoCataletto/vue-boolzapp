@@ -164,6 +164,14 @@ const app = new Vue({
                     }
                 ],
             }
-        ]
-    }
+        ],
+
+        activeUser: 0
+    },
+
+    methods: {
+        changeConvo(index){
+            this.activeUser = index;
+            }
+        }
 })
