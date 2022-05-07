@@ -80,10 +80,10 @@
                 <div id="current-msg">
                     <div class="fLeft spaceAndAlign h100">
                         <div>
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="`img/avatar${contacs[activeUser].avatar}.jpg`" alt="">
                         </div>
                         <div>
-                            <h3>Luisa</h3>
+                            <h3>{{contacs[activeUser].name}}</h3>
                             <p>Ultimo accesso oggi alle</p>
                         </div>
                     </div>

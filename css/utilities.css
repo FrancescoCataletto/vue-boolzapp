@@ -25,3 +25,7 @@
 .h40{
     height: 40px;
 }
+
+.alignSelf{
+    align-self: flex-end;
+}
