@@ -186,6 +186,16 @@ const app = new Vue({
                 }
             )
             this.newSentMessage = ""
+
+            setTimeout(() => {
+                this.contacs[this.activeUser].messages.push(
+                    {
+                        date: '10/01/2020 15:30:55',
+                        message: 'Ok!',
+                        status: 'received'
+                    }
+                )
+            }, 1000)
         }
     }
 })
