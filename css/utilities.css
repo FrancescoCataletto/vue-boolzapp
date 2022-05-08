@@ -29,11 +29,3 @@
 .alignSelf{
     align-self: flex-end;
 }
-
-.visible{
-    display: block;
-}
-
-.hidden{
-    display: none;
-}

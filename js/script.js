@@ -174,8 +174,6 @@ const app = new Vue({
 
         currentDate: "",
 
-        chevron: false,
-
         infos: false
     },
 
@@ -210,11 +208,7 @@ const app = new Vue({
             let  moment = new Date()
             this.currentDate = moment.toLocaleString()
         },
-
-        showChevron(){
-            return this.chevron = !this.chevron
-        },
-
+        
         showInfos(){
             return this.infos = !this.infos
         },

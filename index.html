@@ -99,8 +99,7 @@
                     <div id="conversation-container">   
                         <div id="text-chat"
                              v-for="(el, index) in contacs[activeUser].messages"
-                             :class="el.status"
-                             @click.stop="showChevron()">
+                             :class="el.status">
                             <p>{{el.message}}</p>
                             <p class="time-and-date"><span>{{el.date}}</span></p>
                             <div id="info-msg">
