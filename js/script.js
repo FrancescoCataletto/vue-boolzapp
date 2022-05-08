@@ -172,7 +172,11 @@ const app = new Vue({
 
         searchUser: "",
 
-        currentDate: ""
+        currentDate: "",
+
+        chevron: false,
+
+        infos: false
     },
 
     methods: {
@@ -205,7 +209,20 @@ const app = new Vue({
         timeAndDate(){
             let  moment = new Date()
             this.currentDate = moment.toLocaleString()
-            console.log(this.currentDate)
+        },
+
+        showChevron(){
+            return this.chevron = !this.chevron
+        },
+
+        showInfos(){
+            return this.infos = !this.infos
+        },
+
+        deleteMsg(index){
+            this.contacs[this.activeUser].messages.splice(
+                index, 1
+            )
         }
     }
 })

@@ -183,6 +183,41 @@ main{
     flex-direction: column;
 }
 
+#text-chat{
+    cursor: pointer;
+}
+
+#info-msg{
+    align-self: flex-end;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+#text-chat:hover #info-msg{
+    display: block;
+}
+
+#delete-msg{
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    font-size: 14px;
+    width: 140px;
+    right: 0px;
+    border: 1px solid black;
+}
+
+#delete-msg p:first-child{
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+}
+
+#delete-msg p:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
 .sent{
     background-color: rgb(213, 249, 186);
     border-radius: 10px;

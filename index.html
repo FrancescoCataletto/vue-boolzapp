@@ -85,7 +85,7 @@
                         </div>
                         <div>
                             <h3>{{contacs[activeUser].name}}</h3>
-                            <p>Ultimo accesso oggi alle {{contacs[activeUser].messages[contacs[activeUser].messages.length - 1].date}}</p>
+                            <p>Ultimo accesso oggi alle 16:35</p>
                         </div>
                     </div>
                     <div class="fRight h100 justAndAlign">
@@ -97,10 +97,21 @@
                 <!-- whole current conversation -->
                 <div id="conversation">
                     <div id="conversation-container">   
-                        <div v-for="el in contacs[activeUser].messages"
-                             :class="el.status">
+                        <div id="text-chat"
+                             v-for="(el, index) in contacs[activeUser].messages"
+                             :class="el.status"
+                             @click.stop="showChevron()">
                             <p>{{el.message}}</p>
-                            <p class="time-and-date"><span>{{el.date}}</span></p> 
+                            <p class="time-and-date"><span>{{el.date}}</span></p>
+                            <div id="info-msg">
+                                <i class="fa-solid fa-chevron-down"
+                                   @click.stop="showInfos()"></i>
+                                <div id="delete-msg"
+                                     v-if="infos">
+                                    <p>Info Messaggio</p>
+                                    <p @click.stop="deleteMsg(index)">Cancella Messaggio</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
