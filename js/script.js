@@ -217,6 +217,7 @@ const app = new Vue({
             this.contacs[this.activeUser].messages.splice(
                 index, 1
             )
+
             if(this.contacs[this.activeUser].messages.length === 0){
                 this.contacs[this.activeUser].messages.push(
                     {
@@ -226,6 +227,8 @@ const app = new Vue({
                     }
                 )
             }
+
+            return this.infos = !this.infos
         }
     }
 })
