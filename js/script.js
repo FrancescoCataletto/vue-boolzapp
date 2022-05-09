@@ -208,7 +208,7 @@ const app = new Vue({
             let  moment = new Date()
             this.currentDate = moment.toLocaleString()
         },
-        
+
         showInfos(){
             return this.infos = !this.infos
         },
@@ -217,6 +217,15 @@ const app = new Vue({
             this.contacs[this.activeUser].messages.splice(
                 index, 1
             )
+            if(this.contacs[this.activeUser].messages.length === 0){
+                this.contacs[this.activeUser].messages.push(
+                    {
+                        date: "",
+                        message: "",
+                        status: ""
+                    }
+                )
+            }
         }
     }
 })
