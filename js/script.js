@@ -189,7 +189,7 @@ const app = new Vue({
                     date: this.currentDate,
                     message: this.newSentMessage,
                     status: 'sent'
-                }
+                },
             )
             this.newSentMessage = ""
 
